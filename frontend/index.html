@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"/>
+    <title>Symulacja Ruchu Harmonicznego</title>
+</head>
+<body>
+    <header>
+        <h1>Symulacja Ruchu Harmonicznego</h1>
+    </header>
+    <nav>
+        <button id="register-button">Rejestracja</button>
+        <button id="login-button">Logowanie</button>
+        <button id="logout-button" style="display: none;">Wylogowanie</button>
+        <button id="save-settings">Zapisz ustawienia</button>
+        <button id="load-settings">Wczytaj ustawienia</button>
+    </nav>
+    
+    <main>
+        <div id="parameters">
+            <label><span>Masa</span><input type="number" id="mass" value="1"></label>
+            <label><span>Stala sprezystosci</span><input type="number" id="spring-constant" value="10"></label>
+            <label><span>Tlumienie</span><input type="number" id="damping" value="0.5"></label>
+            <label><span>Amplituda</span><input type="number" id="amplitude" value="5"></label>
+        </div>
+        <button id="start-simulation">Symuluj</button>
+        <div class="canvas-container">
+        <canvas class="white-border" id="harmonic-canvas" width="900" height="600"></canvas>
+        <svg class="white-border" id="graph-svg" width="900" height="600"></svg>
+        </div>
+    </main>
+    <script src="simulation.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>
